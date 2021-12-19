@@ -13,11 +13,19 @@ segundo_componente_do_grupo:Rodolfo Gomes
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
-<br>e motivação da escolha realizada. <br>
-
-> A empresa "Devcom Projetos" visa colaborar com desenvolvimento de projetos para uma sociedade melhor. Sabendo-se dos desafios para gerenciar projetos dentro de uma empresa e visando unir as informações relativas a funcionários, departamentos e projetos em um mesmo local, ficamos motivados com o desenvolvimento deste sistema. O Sistema "Devcom" tem como objetivo gerenciar todas as informações ao desenvolvimento das atividades de projetos em diversas localidades do país. Para realizar suas operações adequadamente e empresa necessita que sistema que armazene informações relativas aos Projetos, Departamentos e Empregados, além de também armazenar dados sobre  Dependentes e Históricos de Salário dos empregados. O sistema deverá gerar um conjunto de relatórios que por sua vez atenderá os anseios da empresa em questão.
- 
+Este documento contém a especificação do projeto do banco de dados <Barbearia Gourmet Style Hair> 
+<br>
+> A motivação para desenvolver esse projeto, é em virtude das dificuldades do administrador da barbearia. Ele relatou que estava ficando cada vez mais difícil manter o
+controle dos dados, pois algumas informações ele não tinha onde armazenar, e ou, não sabia como registrar. Os dados eram registrados em agendas, logo ele guardava muitas
+informações desnecessárias. Além disso, de forma desorganizada em relação aos clientes.
+De serviços e estoque, o administradorr não possuía controle, era tudo feito a partir do
+que elr conseguia observar. O controle era feito da seguinte forma: Com relação aos serviços ele não sabia se
+algum funcionário estava realizando poucos, ou nenhum, e não tinha controle sobre os produtos usados pelo mesmo. 
+Já as informações dos funcionários, não existia nenhum vínculo empregatício, ou seja, apenas informações de que ele se lembrava: nome,
+aniversário, salário, endereços, etc.
+Portanto solicitei ao administrador que o seu negócio fosse o objeto de estudo, para algumas disciplinas da faculdade. E neste arquivo estão contidas as informações
+pertinentes ao Banco de Dados do projeto.
+<br>
 
 ### 3.MINI-MUNDO<br>
 
