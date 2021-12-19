@@ -1,0 +1,86 @@
+/* Trabalho_1_Logico_v3: */
+
+CREATE TABLE PESSOA (
+    id_pessoa int PRIMARY KEY,
+    cpf varchar,
+    nome varchar,
+    sobrenome varchar,
+    telefone varchar,
+    email varchar,
+    FK_ENDERECO_id_endereco int
+);
+
+CREATE TABLE SERVICO (
+    tipo_servico varchar,
+    id_servico int PRIMARY KEY,
+    valor float
+);
+
+CREATE TABLE ENDERECO (
+    tipoLogradouro varchar,
+    logradouro varchar,
+    numero int,
+    bairro varchar,
+    cidade varchar,
+    estado varchar,
+    cep varchar,
+    id_endereco int PRIMARY KEY
+);
+
+CREATE TABLE ORDEM_SERVICO (
+    id_os int PRIMARY KEY,
+    data date,
+    hora time,
+    status varchar,
+    FK_PESSOA_id_pessoa int
+);
+
+CREATE TABLE FUNCIONARIO (
+    cargo varchar,
+    FK_PESSOA_id_pessoa int PRIMARY KEY
+);
+
+CREATE TABLE Requisita (
+    fk_SERVICO_id_servico int,
+    fk_ORDEM_SERVICO_id_os int
+);
+
+CREATE TABLE Executa (
+    fk_FUNCIONARIO_FK_PESSOA_id_pessoa int,
+    fk_ORDEM_SERVICO_id_os int
+);
+ 
+ALTER TABLE PESSOA ADD CONSTRAINT FK_PESSOA_2
+    FOREIGN KEY (FK_ENDERECO_id_endereco)
+    REFERENCES ENDERECO (id_endereco)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE ORDEM_SERVICO ADD CONSTRAINT FK_ORDEM_SERVICO_2
+    FOREIGN KEY (FK_PESSOA_id_pessoa)
+    REFERENCES PESSOA (id_pessoa)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE FUNCIONARIO ADD CONSTRAINT FK_FUNCIONARIO_2
+    FOREIGN KEY (FK_PESSOA_id_pessoa)
+    REFERENCES PESSOA (id_pessoa)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Requisita ADD CONSTRAINT FK_Requisita_1
+    FOREIGN KEY (fk_SERVICO_id_servico)
+    REFERENCES SERVICO (id_servico)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Requisita ADD CONSTRAINT FK_Requisita_2
+    FOREIGN KEY (fk_ORDEM_SERVICO_id_os)
+    REFERENCES ORDEM_SERVICO (id_os)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Executa ADD CONSTRAINT FK_Executa_1
+    FOREIGN KEY (fk_FUNCIONARIO_FK_PESSOA_id_pessoa)
+    REFERENCES FUNCIONARIO (FK_PESSOA_id_pessoa)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Executa ADD CONSTRAINT FK_Executa_2
+    FOREIGN KEY (fk_ORDEM_SERVICO_id_os)
+    REFERENCES ORDEM_SERVICO (id_os)
+    ON DELETE SET NULL;
