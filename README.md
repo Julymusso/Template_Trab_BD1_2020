@@ -1,4 +1,4 @@
-# TRABALHO 01:  Título do Trabalho
+# TRABALHO 01:  Barbearia Gourmet Style Hair
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
@@ -24,8 +24,7 @@ algum funcionário estava realizando poucos, ou nenhum, e não tinha controle so
 Já as informações dos funcionários, não existia nenhum vínculo empregatício, ou seja, apenas informações de que ele se lembrava: nome,
 aniversário, salário, endereços, etc.
 Portanto solicitei ao administrador que o seu negócio fosse o objeto de estudo, para algumas disciplinas da faculdade. E neste arquivo estão contidas as informações
-pertinentes ao Banco de Dados do projeto.
-<br>
+pertinentes ao Banco de Dados do projeto.<br>
 
 ### 3.MINI-MUNDO<br>
 
