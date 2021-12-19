@@ -13,7 +13,7 @@ segundo_componente_do_grupo:Rodolfo Gomes
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
-Este documento contém a especificação do projeto do banco de dados <Barbearia Gourmet Style Hair> 
+Este documento contém a especificação do projeto do banco de dados Barbearia Gourmet Style Hair
 <br>
 > A motivação para desenvolver esse projeto, é em virtude das dificuldades do administrador da barbearia. Ele relatou que estava ficando cada vez mais difícil manter o
 controle dos dados, pois algumas informações ele não tinha onde armazenar, e ou, não sabia como registrar. Os dados eram registrados em agendas, logo ele guardava muitas
