@@ -5,11 +5,11 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:Carlos Henrique Costa Matos
+primeiro_componente_do_grupo: Carlos Henrique Costa Matos
 
-segundo_componente_do_grupo:Juliana Ricato Musso
+segundo_componente_do_grupo: Juliana Ricato Musso
 
-segundo_componente_do_grupo:Rodolfo Gomes
+terceiro_componente_do_grupo: Rodolfo Gomes
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
