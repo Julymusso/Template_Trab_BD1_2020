@@ -68,9 +68,11 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     
 ### 5.MODELO CONCEITUAL<br>
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
+       B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
+    Pessoa,Funcionario,Serviço      
+    C) Principais fluxos de informação/entidades do sistema (mínimo 3).
+    Pessoa -> solicita -> serviço
+    Funcionario -> executa -> ordem de serviço
     D) Qualidade e Clareza
         Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
