@@ -101,11 +101,51 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     cep: campo que armazena o cep da casa da pessoa
     id_endereco: campo que armazena o id do endereço
 
-------------------------------
-    executa: Tabela que armazena as chaves que ligam as tabelas ordem_servico e pessoa
-    fk_funcionario_fk
-    
 
+    executa: Tabela que armazena as chaves que ligam as tabelas ordem_servico e pessoa
+    
+    fk_funcionario_fk_pessoa_id_pessoa: campo que armazena a chave estrangeira
+    fk_ordem_servico_id_os: campo que armazena a chave estrangeira
+    
+    
+    funcionario: Tabela que armazena as informações relativas ao funcionario<br>
+    
+    cargo: cargo do funcionario na barbearia
+    fk_pessoa_id_pessoa: chave estrangeira de funcionario
+    
+    
+    ordem_servico
+    
+    id_os 
+    data
+    hora
+    status
+    fk_pessoa_id_pessoa
+    
+    
+    pessoa
+    
+    id_pessoa
+    cpf
+    nome
+    sobrenome
+    telefone
+    email
+    fk_endereco_id_endereco
+    
+    
+    requisita
+    
+    fk_servico_id_servico
+    fk_ordem_servico_id_os
+    
+    
+    servico
+    
+    tipo_servico
+    id_servico
+    valor
+    --------------------------------
 ### 6	MODELO LÓGICO<br>
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
