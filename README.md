@@ -51,19 +51,12 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ![Alt text](https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/images/Prototipo.png?raw=true "Title")
 ![Arquivo PDF do Protótipo Balsamiq feito para a Barbearia Gourmet](https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/arquivos/Prototipo_Barbearia_Gourmet.pdf)
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
-    
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
-* Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
-* Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
-* Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo. 
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa.
-
- 
- 
+    *Relatório que exibe o histórico de serviço do cliente. O relatório deve conter o nome e cpf do cliente. Em cada linha, o nome do funcionário que atendeu, o tipo de serviço solicitado e os  respectivos valores, data e hora. 
+    *Faturamento por período. O fatura por período deve exibir todos os serviços prestados pela barbearia dentro do período solicitado, suas respectivas datas e valores e a soma total.
+    *Produtividade do funcionário. O relatório deve conter o nome e cpf do funcionário e o período solicitado. Em cada linha, os tipos de serviços realizados com data, hora e valor. Por fim, o valor total capitalizado no período.
+   *Agendamentos do dia. O relatório deve conter quais os serviços agendados para o dia, a data e hora e o nome do funcionário responsável, o nome e telefone do cliente.
+   *Ordem de Serviço. A OS deve conter todos os dados do cliente (exceto endereço), os tipos de serviço com suas respectivas horas, datas e valores. Por fim o valor total da OS.
+   
 #### 4.3 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
     b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
