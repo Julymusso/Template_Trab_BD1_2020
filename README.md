@@ -69,10 +69,11 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ### 5.MODELO CONCEITUAL<br>
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
     B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-    Pessoa,Funcionario,Serviço      
+    Pessoa,Funcionario,Serviço, Ordem de serviço      
     C) Principais fluxos de informação/entidades do sistema (mínimo 3).
     Pessoa -> solicita -> serviço
     Funcionario -> executa -> ordem de serviço
+    Ordem de serviço -> requisita -> serviço
     D) Qualidade e Clareza
         Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
