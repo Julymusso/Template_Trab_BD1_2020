@@ -145,7 +145,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     tipo_servico
     id_servico
     valor
-    --------------------------------
+------------------------------
 ### 6	MODELO LÓGICO<br>
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
