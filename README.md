@@ -114,13 +114,13 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     fk_pessoa_id_pessoa: chave estrangeira de funcionario
     
     
-    ordem_servico
+    ordem_servico Tabela que armazena as informações relativas as ordens de servico do salão<br>
     
-    id_os 
-    data
-    hora
-    status
-    fk_pessoa_id_pessoa
+    id_os: codigo id da ordem de serviço
+    data: data que o serviço sera feito
+    hora: hora em que o serviço sera feito
+    status: agendado(a)/executado(a)/não executado(a)
+    fk_pessoa_id_pessoa: chave estrangeira de ordem_servico
     
     
     pessoa
