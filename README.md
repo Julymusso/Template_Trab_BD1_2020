@@ -50,12 +50,14 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 ![Alt text](https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/images/Prototipo.png?raw=true "Title")
 ![Arquivo PDF do Protótipo Balsamiq feito para a Barbearia Gourmet](https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/arquivos/Prototipo_Barbearia_Gourmet.pdf)
+
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     *Relatório que exibe o histórico de serviço do cliente. O relatório deve conter o nome e cpf do cliente. Em cada linha, o nome do funcionário que atendeu, o tipo de serviço solicitado e os  respectivos valores, data e hora. 
     *Faturamento por período. O fatura por período deve exibir todos os serviços prestados pela barbearia dentro do período solicitado, suas respectivas datas e valores e a soma total.
     *Produtividade do funcionário. O relatório deve conter o nome e cpf do funcionário e o período solicitado. Em cada linha, os tipos de serviços realizados com data, hora e valor. Por fim, o valor total capitalizado no período.
-   *Agendamentos do dia. O relatório deve conter quais os serviços agendados para o dia, a data e hora e o nome do funcionário responsável, o nome e telefone do cliente.
-   *Ordem de Serviço. A OS deve conter todos os dados do cliente (exceto endereço), os tipos de serviço com suas respectivas horas, datas e valores. Por fim o valor total da OS.
+    *Agendamentos do dia. O relatório deve conter quais os serviços agendados para o dia, a data e hora e o nome do funcionário responsável, o nome e telefone do cliente.
+    *Ordem de Serviço. A OS deve conter todos os dados do cliente (exceto endereço), os tipos de serviço com suas respectivas horas, datas e valores. Por fim o valor total da OS.
+
    
 #### 4.3 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
