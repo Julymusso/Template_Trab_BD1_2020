@@ -89,12 +89,22 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
+------------------------------
+    endereco: Tabela que armazena as informações relativas ao cliente<br>
     
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    tipologradouro: campo que armazena o tipo de logradouro que a pessoa mora.<br>
+    logradouro: campo que armazena o logradouro que a pessoa mora.<br>
+    numero: campo que armazena o numero da abitação que a pessoa mora
+    bairro: campo que armazena o bairro que a pessoa mora
+    cidade: campo que armazena a cidade em que a pessoa mora
+    estado: campo que armazena o estado em que a pessoa mora
+    cep: campo que armazena o cep da casa da pessoa
+    id_endereco: campo que armazena o id do endereço
 
+------------------------------
+    executa: Tabela que armazena as chaves que ligam as tabelas ordem_servico e pessoa
+    fk_funcionario_fk
+    
 
 ### 6	MODELO LÓGICO<br>
         a) inclusão do esquema lógico do banco de dados
