@@ -68,7 +68,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     
 ### 5.MODELO CONCEITUAL<br>
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-       B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
+    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
     Pessoa,Funcionario,Serviço      
     C) Principais fluxos de informação/entidades do sistema (mínimo 3).
     Pessoa -> solicita -> serviço
