@@ -134,17 +134,17 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     fk_endereco_id_endereco: chave estrangeira de pessoa
     
     
-    requisita
+    requisita Tabaela que faz a junção entre servico e a orden de servico
     
-    fk_servico_id_servico
-    fk_ordem_servico_id_os
+    fk_servico_id_servico chave estrangeira
+    fk_ordem_servico_id_os chave estrangeira
     
     
-    servico
+    servico Trabela com as informações dos serviços que serão realizados
     
-    tipo_servico
-    id_servico
-    valor
+    tipo_servico: tipo do corte de cabelo que sera feito
+    id_servico: numero de identificação desse serviço
+    valor: valor do serviço
 ------------------------------
 ### 6	MODELO LÓGICO<br>
         a) inclusão do esquema lógico do banco de dados
