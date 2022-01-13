@@ -123,15 +123,15 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     fk_pessoa_id_pessoa: chave estrangeira de ordem_servico
     
     
-    pessoa
+    pessoa: Tabela que armazena as informações relativa as pessoas
     
-    id_pessoa
-    cpf
-    nome
-    sobrenome
-    telefone
-    email
-    fk_endereco_id_endereco
+    id_pessoa: numero de identificação de cada pessoa no salão
+    cpf: numero do CPF da pessoa cadastrada
+    nome: nome da pessoa cadastrada
+    sobrenome: sobrenome da pessoa cadastrada
+    telefone: telefone da pessoa cadastrada
+    email: email da pessoa cadastrada
+    fk_endereco_id_endereco: chave estrangeira de pessoa
     
     
     requisita
