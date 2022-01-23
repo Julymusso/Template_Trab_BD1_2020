@@ -203,7 +203,31 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
+    pessoa_inicia_r = pd.read_sql_query("select * from pessoa where nome ilike 'r%'", comn)
+    
+    pessoa_r = pd.read_sql_query("select * from pessoa where nome ilike '%r%'", comn)
+    
+    pessoa_numero77 = pd.read_sql_query("select * from pessoa where telefone like '%77%'", comn)
+    
+    pessoa_email_gmail = pd.read_sql_query("select * from pessoa where email like '%@gmail%'", comn)
+    
+    pessoa_contem_A = pd.read_sql_query("select * from pessoa where nome ilike '%A%'", comn)
+    
     b) Criar uma consulta para cada tipo de função data apresentada.
+    
+    ordem_servico_1 = pd.read_sql_query("select * from ordem_servico where data = '%2021-12-20%'", comn)
+    
+    ordem_servico_2 = pd.read_sql_query("select * from ordem_servico where data = '%2021-12-19%' and status = 'agendado'", comn)
+    
+    ordem_servico_3 = pd.read_sql_query("select * from ordem_servico where data >= '2021-12-19' and data <= '2021-12-21'", comn)
+    
+    ordem_servico_4 = pd.read_sql_query("select * from ordem_servico where data >= '2021-12-14' and data <= '2021-12-21'", comn)
+    
+    ordem_executado = pd.read_sql_query("select * from ordem_servico where data >= '2021-12-13' and status = 'executado'", comn)
+    
+    ordem_nao_executado = pd.read_sql_query("select * from ordem_servico where data >= '2021-12-17' and status = 'não-executado'", comn)
+    
+    ordem_servico_executada = pd.read_sql_query("select * from ordem_servico where status = 'não-executado'", comn)
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
