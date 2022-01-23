@@ -227,7 +227,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     on (pessoa.id_pessoa = funcionario.fk_pessoa_id_pessoa)
     group by pessoa.nome, pessoa.cpf, funcionario.fk_pessoa_id_pessoa
     order by pessoa.nome asc
-
+    
     -- 3 funcionario
     select pessoa.nome, funcionario.cargo, servico.id_servico
     from pessoa as pessoa
