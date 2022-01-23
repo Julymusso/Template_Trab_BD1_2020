@@ -177,10 +177,29 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     
     ordem_servico_2021_12_17 = pd.read_sql_query("select * from ordem_servico where data = '2021-12-17'", comn)
     
-    servico_valor = pd.read_sql_query("select * from servico where valor >= 20 and valor < 50", comn)
+    valor_corte_20_30 = pd.read_sql_query("select * from servico where tipo_servico = 'Corte de cabelo' and valor >= 20 and valor <= 45", comn)
     
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
+    ordem_servico_executado_2021_12_17 = pd.read_sql_query("select * from ordem_servico where status = 'executado' and data = '2021-12-17'", comn)
+    
+    servico_depilacao_corte = pd.read_sql_query("select * from servico where tipo_servico = 'Corte de cabelo' or tipo_servico = 'Depilação'", comn)
+    
+    endereco_nao_vitoria = pd.read_sql_query("select * from endereco where cidade != 'Vitoria' or estado != 'Espirito Santo'", comn)
+        
+    b) Criar no mínimo 3 consultas com operadores aritméticos
+    
+    servico_valor = pd.read_sql_query("select * from servico where valor >= 20", comn)
+    
+    ordem_servico_depois_2021_12_17 = pd.read_sql_query("select * from ordem_servico where data = '2021-12-17'", comn)
+    
+    ordem_servico_antes_170000 = pd.read_sql_query("select * from ordem_servico where hora < '17:00:00'", comn)
+    
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+    
+    servico_nao_corte = pd.read_sql_query("select tipo_servico as Servicos from servico where tipo_servico != 'Corte de cabelo'", comn)
+    
+    ordem_servico_dia = pd.read_sql_query("select data as dia,hora as horario from ordem_servico where status = 'agendado' and data = '2021-12-19'", comn)
+    
+    endereco_rua = pd.read_sql_query("select logradouro as rua,numero from endereco where cidade = 'Serra'", comn)
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
