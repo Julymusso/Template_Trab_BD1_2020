@@ -172,6 +172,15 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
+    bairro_jardim_camburi = pd.read_sql_query("select * from endereco where bairro = 'Jardim Camburi'", comn)
+    
+    tipo_servico = pd.read_sql_query("select * from servico where tipo_servico = 'Corte de cabelo'", comn)
+    
+    ordem_servico_agendado = pd.read_sql_query("select * from ordem_servico where status = 'agendado'", comn)
+    
+    ordem_servico_2021_12_17 = pd.read_sql_query("select * from ordem_servico where data = '2021-12-17'", comn)
+  
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
