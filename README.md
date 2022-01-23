@@ -207,7 +207,20 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
+
+    DROP TABLE ordem_servico, pessoa;
+
+    ALTER TABLE ordem_servico DROP COLUMN status
+
+    ALTER TABLE ordem_servico DROP COLUMN status and hora
+
     b) Criar minimo 3 de atualização
+
+    UPDATE pessoa SET nome = 'Henrique' WHERE nome = 'Carlos'
+
+    UPDATE ordem_servico SET status = 'Executado' WHERE status = 'não-executado'
+
+    UPDATE endereco SET logradouro = 'Rua 10', numero = 200, bairro = 'Mata da Praia', cidade = 'Vitoria', cep = '25060333' WHERE id_endereco = 6
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
