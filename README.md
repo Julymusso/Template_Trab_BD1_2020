@@ -258,6 +258,27 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
+    
+     valores_sevico = pd.read_sql_query(""" select ordem_servico.data, servico.valor, count(ordem_servico.data) as ordem_de_servicos from ordem_servico join servico as servico on(ordem_servico.id_os = servico.id_servico)
+     where ordem_servico.data = '2021-12-04' group by ordem_servico.data, servico.valor """, comn)
+     
+     cliente_bairro = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) from pessoa as pessoa join ordem_servico as ordem_servico
+on(pessoa.id_pessoa = ordem_servico.id_os) join endereco on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) where endereco.cidade = 'Vitoria'
+group by pessoa.nome, endereco.bairro""", comn)
+     
+     cliente_bairro_VV = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) from pessoa as pessoa join ordem_servico as ordem_servico
+on(pessoa.id_pessoa = ordem_servico.id_os) join endereco on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) where endereco.cidade = 'Vila Velha'
+group by pessoa.nome, endereco.bairro""", comn)
+
+     cliente_bairro_Serra = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) from pessoa as pessoa join ordem_servico as ordem_servico
+     on(pessoa.id_pessoa = ordem_servico.id_os) join endereco on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) where endereco.cidade = 'Serra'
+     group by pessoa.nome, endereco.bairro""", comn)
+     
+     valores_sevico_2 = pd.read_sql_query(""" select ordem_servico.data, servico.valor, count(ordem_servico.data) as ordem_de_servicos from ordem_servico join servico as servico on(ordem_servico.id_os = servico.id_servico)
+where ordem_servico.data = '2021-12-04' and valor >= 39.0 and valor <= 44.0 group by ordem_servico.data, servico.valor """, comn)
+
+     ordem_servico_valores = pd.read_sql_query("""select ordem_servico.data, servico.valor, count(ordem_servico.data) as ordem_de_servicos from ordem_servico join servico as servico on(ordem_servico.id_os = servico.id_servico)
+     where ordem_servico.data >= '2021-12-04' group by ordem_servico.data, servico.valor """, comn)
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
