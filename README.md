@@ -377,8 +377,28 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     ORDER BY os1.status;
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
-     a) Criar minimo 1 envolvendo GROUP BY
-     b) Criar minimo 1 envolvendo algum tipo de junção
+    a) Criar minimo 1 envolvendo GROUP BY
+
+    SELECT cidade, bairro, numero 
+    FROM endereco 
+    WHERE id_endereco = (SELECT id_pessoa FROM pessoa WHERE pessoa.nome = 'Juliana')
+
+    SELECT estado, cidade, bairro, numero 
+    FROM endereco WHERE id_endereco in (SELECT fk_pessoa_id_pessoa FROM funcionario 
+    as cargo WHERE cargo like 'cabeleireiro') 
+    ORDER BY estado, cidade, bairro, numero
+
+    b) Criar minimo 1 envolvendo algum tipo de junção
+
+    SELECT ordem_servico.hora, ordem_servico.data,ordem_servico.status 
+    FROM ordem_servico
+    WHERE fk_pessoa_id_pessoa in (SELECT fk_pessoa_id_pessoa FROM funcionario as cargo WHERE cargo like 'Manicure') 
+    GROUP BY ordem_servico.hora,ordem_servico.data,ordem_servico.status
+
+    SELECT nome,sobrenome,telefone FROM pessoa WHERE id_pessoa in  (SELECT fk_pessoa_id_pessoa FROM ordem_servico as osrv
+    WHERE status ilike 'executado') 
+    GROUP BY nome,sobrenome,telefone
+     
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
