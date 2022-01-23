@@ -259,55 +259,42 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
     
-     valores_sevico = pd.read_sql_query(""" select ordem_servico.data, servico.valor, count(ordem_servico.data) as ordem_de_servicos from ordem_servico join servico as servico on(ordem_servico.id_os = servico.id_servico)
+     valores_sevico = pd.read_sql_query(""" select ordem_servico.data, servico.valor,count(ordem_servico.data) 
+     as ordem_de_servicos from ordem_servico join servico as servico 
+     on(ordem_servico.id_os = servico.id_servico)
      where ordem_servico.data = '2021-12-04' group by ordem_servico.data, servico.valor """, comn)
      
-     cliente_bairro = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) from pessoa as pessoa join ordem_servico as ordem_servico
-on(pessoa.id_pessoa = ordem_servico.id_os) join endereco on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) where endereco.cidade = 'Vitoria'
-group by pessoa.nome, endereco.bairro""", comn)
-     
-     cliente_bairro_VV = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) from pessoa as pessoa join ordem_servico as ordem_servico
-on(pessoa.id_pessoa = ordem_servico.id_os) join endereco on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) where endereco.cidade = 'Vila Velha'
-group by pessoa.nome, endereco.bairro""", comn)
-
-     cliente_bairro_Serra = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) from pessoa as pessoa join ordem_servico as ordem_servico
-     on(pessoa.id_pessoa = ordem_servico.id_os) join endereco on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) where endereco.cidade = 'Serra'
+     cliente_bairro = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) 
+     from pessoa as pessoa join ordem_servico as ordem_servico 
+     on(pessoa.id_pessoa = ordem_servico.id_os) join endereco 
+     on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) 
+     where endereco.cidade = 'Vitoria'
      group by pessoa.nome, endereco.bairro""", comn)
      
-     valores_sevico_2 = pd.read_sql_query(""" select ordem_servico.data, servico.valor, count(ordem_servico.data) as ordem_de_servicos from ordem_servico join servico as servico on(ordem_servico.id_os = servico.id_servico)
-where ordem_servico.data = '2021-12-04' and valor >= 39.0 and valor <= 44.0 group by ordem_servico.data, servico.valor """, comn)
+     cliente_bairro_VV = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) 
+     from pessoa as pessoa join ordem_servico as ordem_servico on(pessoa.id_pessoa = ordem_servico.id_os) 
+     join endereco on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) 
+     where endereco.cidade = 'Vila Velha'
+     group by pessoa.nome, endereco.bairro""", comn)
 
-     ordem_servico_valores = pd.read_sql_query("""select ordem_servico.data, servico.valor, count(ordem_servico.data) as ordem_de_servicos from ordem_servico join servico as servico on(ordem_servico.id_os = servico.id_servico)
+     cliente_bairro_Serra = pd.read_sql_query(""" select pessoa.nome, endereco.bairro, count(endereco.bairro) 
+     from pessoa as pessoa join ordem_servico as ordem_servico
+     on(pessoa.id_pessoa = ordem_servico.id_os) join endereco 
+     on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) 
+     where endereco.cidade = 'Serra'
+     group by pessoa.nome, endereco.bairro""", comn)
+     
+     valores_sevico_2 = pd.read_sql_query(""" select ordem_servico.data, servico.valor, count(ordem_servico.data) as ordem_de_servicos 
+     from ordem_servico join servico as servico on(ordem_servico.id_os = servico.id_servico)
+     where ordem_servico.data = '2021-12-04' and valor >= 39.0 and valor <= 44.0 group by ordem_servico.data, servico.valor """, comn)
+
+     ordem_servico_valores = pd.read_sql_query("""select ordem_servico.data, servico.valor, count(ordem_servico.data) 
+     as ordem_de_servicos from ordem_servico join servico as servico 
+     on(ordem_servico.id_os = servico.id_servico)
      where ordem_servico.data >= '2021-12-04' group by ordem_servico.data, servico.valor """, comn)
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
-
-    --1 left pessoa e cargo
-    select pessoa.nome, funcionario.cargo as cargo
-    from pessoa as pessoa
-    left join funcionario on (funcionario.fk_pessoa_id_pessoa = pessoa.id_pessoa)
-    where funcionario.cargo is not null
-    order by pessoa
-
-    -- 2 right -cargos
-    select funcionario.cargo as cargo
-    from funcionario
-    right join ordem_servico 
-    on (ordem_servico.id_os = funcionario.fk_pessoa_id_pessoa)
-    where funcionario.cargo is not null
-    order by ordem_servico.id_os
-
-    --3 full join pessoa e seu endereco
-    select pessoa.nome, endereco.logradouro, endereco.bairro, endereco.cidade as cidade
-    from endereco
-    full join pessoa
-    on (pessoa.fk_endereco_id_endereco = endereco.id_endereco)
-
-    --4 full join pessoa que reside em vitoria
-    select pessoa.nome, endereco.logradouro, endereco.bairro, endereco.cidade as cidade 
-    from endereco full join pessoa on (pessoa.fk_endereco_id_endereco = endereco.id_endereco) 
-    where cidade = 'Vitoria'
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
