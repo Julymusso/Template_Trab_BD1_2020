@@ -189,6 +189,73 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
 
+    -- 1 pessoa e seu endereco
+    select pessoa.nome, pessoa.cpf, endereco.logradouro, endereco.bairro, endereco.cidade
+    from pessoa 
+    join funcionario 
+    on (pessoa.id_pessoa = funcionario.fk_pessoa_id_pessoa)
+    join endereco
+    on(pessoa.id_pessoa = endereco.id_endereco)
+    group by pessoa.nome, pessoa.cpf, endereco.logradouro, endereco.bairro, endereco.cidade
+    order by pessoa.nome asc
+
+    -- 2 quem são funcionarios
+    select pessoa.nome, pessoa.cpf, funcionario.fk_pessoa_id_pessoa
+    from pessoa as pessoa
+    join funcionario as funcionario
+    on (pessoa.id_pessoa = funcionario.fk_pessoa_id_pessoa)
+    group by pessoa.nome, pessoa.cpf, funcionario.fk_pessoa_id_pessoa
+    order by pessoa.nome asc
+
+    -- 3 funcionario
+    select pessoa.nome, funcionario.cargo, servico.id_servico
+    from pessoa as pessoa
+    join funcionario
+    on(funcionario.fk_pessoa_id_pessoa = pessoa.id_pessoa)
+    join servico
+    on(funcionario.fk_pessoa_id_pessoa = servico.id_servico)
+    group by pessoa.nome, funcionario.cargo, servico.id_servico
+    order by servico.id_servico asc
+
+    -- 4 atividades que faz
+    select pessoa.nome, funcionario.cargo, servico.tipo_servico
+    from pessoa as pessoa
+    join funcionario
+    on(funcionario.fk_pessoa_id_pessoa = pessoa.id_pessoa)
+    join servico
+    on(funcionario.fk_pessoa_id_pessoa = servico.id_servico)
+    group by pessoa.nome, funcionario.cargo, servico.tipo_servico
+    order by funcionario.cargo asc
+
+    -- 5 valores dos servicos
+    select servico.tipo_servico, servico.valor
+    from ordem_servico as ordem_servico
+    join servico
+    on(servico.id_servico = ordem_servico.fk_pessoa_id_pessoa)
+    group by servico.tipo_servico, servico.valor
+    order by servico.tipo_servico asc
+
+    --6 todas as tabelas
+    select pessoa.nome, pessoa.cpf, funcionario.cargo, endereco.logradouro,
+    ordem_servico.data, executa.fk_funcionario_fk_pessoa_id_pessoa,
+    requisita.fk_servico_id_servico, servico.valor
+    from pessoa 
+    join funcionario 
+    on (pessoa.id_pessoa = funcionario.fk_pessoa_id_pessoa)
+    join endereco
+    on (endereco.id_endereco = pessoa.fk_endereco_id_endereco)
+    join ordem_servico 
+    on(ordem_servico.fk_pessoa_id_pessoa = pessoa.fk_endereco_id_endereco)
+    join executa
+    on(executa.fk_funcionario_fk_pessoa_id_pessoa = ordem_servico.fk_pessoa_id_pessoa)
+    join requisita
+    on(executa.fk_funcionario_fk_pessoa_id_pessoa = requisita.fk_servico_id_servico)
+    join servico
+    on(servico.id_servico = requisita.fk_servico_id_servico)
+    group by pessoa.nome, pessoa.cpf, funcionario.cargo, endereco.logradouro, ordem_servico.data, executa.fk_funcionario_fk_pessoa_id_pessoa,
+    requisita.fk_servico_id_servico, servico.valor
+    order by pessoa.nome asc
+
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
 
