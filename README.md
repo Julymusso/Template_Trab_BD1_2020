@@ -187,8 +187,6 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
-
     -- 1 pessoa e seu endereco
     select pessoa.nome, pessoa.cpf, endereco.logradouro, endereco.bairro, endereco.cidade
     from pessoa 
@@ -206,6 +204,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     on (pessoa.id_pessoa = funcionario.fk_pessoa_id_pessoa)
     group by pessoa.nome, pessoa.cpf, funcionario.fk_pessoa_id_pessoa
     order by pessoa.nome asc
+    
+    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+
 
     -- 3 funcionario
     select pessoa.nome, funcionario.cargo, servico.id_servico
