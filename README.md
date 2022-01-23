@@ -187,6 +187,27 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
+
+    select pessoa.nome, pessoa.cpf, funcionario.cargo, endereco.logradouro,
+    ordem_servico.data, funcionario_ordem_servico.fk_funcionario_fk_pessoa_id_pessoa,
+    ordem_servico_servico.fk_servico_id_servico, servico.valor
+    from pessoa 
+    join funcionario 
+    on (pessoa.id_pessoa = funcionario.fk_pessoa_id_pessoa)
+    join endereco
+    on (endereco.id_endereco = pessoa.fk_endereco_id_endereco)
+    join ordem_servico 
+    on(ordem_servico.fk_pessoa_id_pessoa = pessoa.fk_endereco_id_endereco)
+    join funcionario_ordem_servico
+    on(funcionario_ordem_servico.fk_funcionario_fk_pessoa_id_pessoa = ordem_servico.fk_pessoa_id_pessoa)
+    join ordem_servico_servico
+    on(funcionario_ordem_servico.fk_funcionario_fk_pessoa_id_pessoa = ordem_servico_servico.fk_servico_id_servico)
+    join servico
+    on(servico.id_servico = ordem_servico_servico.fk_servico_id_servico)
+    group by pessoa.nome, pessoa.cpf, funcionario.cargo, endereco.logradouro, ordem_servico.data, funcionario_ordem_servico.fk_funcionario_fk_pessoa_id_pessoa,
+    ordem_servico_servico.fk_servico_id_servico, servico.valor
+    order by pessoa.nome asc
+
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
 
     -- 1 pessoa e seu endereco
@@ -234,27 +255,6 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     on(servico.id_servico = ordem_servico.fk_pessoa_id_pessoa)
     group by servico.tipo_servico, servico.valor
     order by servico.tipo_servico asc
-
-    --6 todas as tabelas
-    select pessoa.nome, pessoa.cpf, funcionario.cargo, endereco.logradouro,
-    ordem_servico.data, executa.fk_funcionario_fk_pessoa_id_pessoa,
-    requisita.fk_servico_id_servico, servico.valor
-    from pessoa 
-    join funcionario 
-    on (pessoa.id_pessoa = funcionario.fk_pessoa_id_pessoa)
-    join endereco
-    on (endereco.id_endereco = pessoa.fk_endereco_id_endereco)
-    join ordem_servico 
-    on(ordem_servico.fk_pessoa_id_pessoa = pessoa.fk_endereco_id_endereco)
-    join executa
-    on(executa.fk_funcionario_fk_pessoa_id_pessoa = ordem_servico.fk_pessoa_id_pessoa)
-    join requisita
-    on(executa.fk_funcionario_fk_pessoa_id_pessoa = requisita.fk_servico_id_servico)
-    join servico
-    on(servico.id_servico = requisita.fk_servico_id_servico)
-    group by pessoa.nome, pessoa.cpf, funcionario.cargo, endereco.logradouro, ordem_servico.data, executa.fk_funcionario_fk_pessoa_id_pessoa,
-    requisita.fk_servico_id_servico, servico.valor
-    order by pessoa.nome asc
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
