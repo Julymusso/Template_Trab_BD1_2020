@@ -310,8 +310,34 @@ where ordem_servico.data = '2021-12-04' and valor >= 39.0 and valor <= 44.0 grou
     where cidade = 'Vitoria'
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+    a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
+
+    SELECT * FROM funcionario f1, funcionario f2
+    WHERE f1.fk_pessoa_id_pessoa = f2.fk_pessoa_id_pessoa
+    ORDER BY f1.fk_pessoa_id_pessoa;
+
+    b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+
+    SELECT * FROM pessoa p1, pessoa p2
+    WHERE p1.id_pessoa = p2.id_pessoa
+    ORDER BY p1.id_pessoa;
+
+    SELECT * FROM pessoa p1, pessoa p2
+    WHERE p1.nome = p2.nome AND
+    p1.cpf = '177456749-98'
+    ORDER BY p1.id_pessoa;
+
+    SELECT * FROM servico s1, servico s2
+    WHERE s1.tipo_servico = s2.tipo_servico
+    ORDER BY s1.valor;
+
+    SELECT * FROM ordem_servico os1, ordem_servico os2
+    WHERE os1.status = os2.status
+    ORDER BY os1.data;
+
+    SELECT * FROM ordem_servico os1, ordem_servico os2
+    WHERE os1.data = os2.data
+    ORDER BY os1.status;
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      a) Criar minimo 1 envolvendo GROUP BY
