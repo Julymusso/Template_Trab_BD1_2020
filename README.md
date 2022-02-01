@@ -167,6 +167,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+    Link com todas as queries da questão 9: https://colab.research.google.com/drive/146UXApksUmEjVpN1rXdWHgRoJ-ZmCVH3?usp=sharing
+    
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
