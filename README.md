@@ -453,6 +453,7 @@ https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/BD1_Rel
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
 #### a) Modelo (pecha kucha)<br>
+Link para o vídeo de apresentação: https://youtu.be/iUC_9bQPcGw
 #### b) Tempo de apresentação 6:40 
 
 ># Marco de Entrega 03: Itens 10 e 11<br>
