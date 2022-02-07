@@ -13,8 +13,7 @@ segundo_componente_do_grupo:Rodolfo Gomes
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
-Este documento contém a especificação do projeto do banco de dados Barbearia Gourmet Style Hair
-<br>
+
 > A motivação para desenvolver esse projeto, é em virtude das dificuldades do administrador da barbearia. Ele relatou que estava ficando cada vez mais difícil manter o
 controle dos dados, pois algumas informações ele não tinha onde armazenar, e ou, não sabia como registrar. Os dados eram registrados em agendas, logo ele guardava muitas
 informações desnecessárias. Além disso, de forma desorganizada em relação aos clientes.
@@ -28,12 +27,6 @@ pertinentes ao Banco de Dados do projeto.<br>
 
 ### 3.MINI-MUNDO<br>
 
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar) <br>
-Entrevista com o usuário e identificação dos requisitos.(quando for o caso de sistemas com cliente  real)<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
-
 > Para melhorar o gerenciamento da barbearia Style Hair, Carlos Rodolfo Musso pretende contratar um software para auxiliá-lo. 
 Atualmente a barbearia conta com 1 atendente e 6 funcionários divididos entre as funções de barbeiro/cabeleireiro, podólogo e depilador. 
 O agendamento funciona da seguinte forma: os clientes ligam para a barbearia ou vão até lá pessoalmente. O atendente consulta se já existe um cadastro desse cliente, em caso positivo, consulta também a agenda do profissional que irá realizar o serviço e confirma o agendamento  informando ao cliente a data, hora, tipo do serviço e nome do prestador.
@@ -46,7 +39,7 @@ O cliente é encaminhado para cada profissional realizar o serviço solicitado. 
 
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
+
 
 ![Alt text](https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/images/Prototipo.png?raw=true "Title")
 ![Arquivo PDF do Protótipo Balsamiq feito para a Barbearia Gourmet](https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/arquivos/Prototipo_Barbearia_Gourmet.pdf)
@@ -81,8 +74,6 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         
 ![Alt text](https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/images/Trabalho_1_Conceitual_v3.png?raw=true "Modelo Conceitual")
     
-    
-        
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
@@ -453,6 +444,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ### 10 RELATÓRIOS E GRÁFICOS
 
 #### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
+https://github.com/Julymusso/Trab_BD1_2021_Barbearia_Gourmet/blob/master/BD1_Relatorios_BarbeariaGourmet.ipynb
 #### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
 #### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
 
